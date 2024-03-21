@@ -1,0 +1,168 @@
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.container-fluid {
+  /* width: 100%;*/
+  height: 100vh;
+  background-color: wheat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-row {
+  border-radius: 50px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  padding: 0;
+}
+
+.main-col {
+  background-image: url(../images/background\ image.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.connected-user-container {
+  padding: 0;
+  height: 7%;
+  width: 100%;
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+}
+
+.connected-user {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+}
+
+.see-connected-user {
+  padding: 1.5rem;
+}
+
+.connected-user i {
+  color: rgb(7, 141, 7);
+}
+
+#user-name {
+  color: rgb(255, 255, 255);
+}
+
+.chat-input-container {
+  bottom: 0;
+}
+
+.chat-input-container form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.chat-input-container form input {
+  width: 70vw;
+  height: 5vh;
+}
+
+.chat-input-container form button {
+  height: 5vh;
+}
+
+.chat-display {
+  height: 80vh;
+  margin: 1rem;
+  width: 80vw;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+#send-by-other {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.user-icon img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.message-container {
+  position: relative;
+  background-color: white;
+  padding: 0.5rem 0.5rem 1.6rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  border-radius: 25px 25px 25px 0px;
+  min-width: 8rem;
+}
+
+.message-content {
+  font-size: 1.2rem;
+}
+
+.time-stamp {
+  position: absolute;
+  font-size: 0.7rem;
+  right: 0;
+  padding: 0.5rem 0.7rem;
+  bottom: 0;
+}
+
+#send-by-user {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.5rem;
+  flex-direction: row-reverse;
+}
+
+.user-message-container {
+  background-color: rgb(218 255 162);
+  padding: 0.8rem 0.8rem 1.6rem 0.8rem;
+  border-radius: 25px 25px 0px 25px;
+}
+
+#newUserJoins {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+.span-new-user-joins {
+  background-color: white;
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  /* body {
+    background-color: lightblue;
+  } */
+
+  .main-row {
+    width: 100%;
+    height: 100%;
+  }
+}
