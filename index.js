@@ -2,9 +2,14 @@ const socket = io.connect("http://localhost:8000");
 
 let pictures = ["male1", "female1", "male3", "female2", "male2", "female3"];
 
-const userName = prompt("Enter your username:");
-const authorPic = pictures[Math.floor(Math.random() * pictures.length)];
+let userName = prompt("Enter your username:");
 
+while (!userName) {
+  userName = prompt("Enter your username:");
+}
+
+const authorPic = pictures[Math.floor(Math.random() * pictures.length)];
+// getElementById("chat-input").focus();
 const userDetails = {
   userName,
   authorPic,
@@ -51,7 +56,7 @@ document.getElementById("new-message-btn").addEventListener("click", () => {
     userIconDiv.setAttribute("class", "user-icon");
 
     const imageTag = document.createElement("img");
-    imageTag.src = `../../public/images/${authorPic}.png`;
+    imageTag.src = `public/images/${authorPic}.png`;
 
     userIconDiv.appendChild(imageTag);
     sendByUserDiv.appendChild(userIconDiv);
@@ -96,7 +101,7 @@ socket.on("chatMessage", (messageContent) => {
   userIconDiv.setAttribute("class", "user-icon");
 
   const imageTag = document.createElement("img");
-  imageTag.src = `../../public/images/${messageContent.authorPic}.png`;
+  imageTag.src = `public/images/${messageContent.authorPic}.png`;
 
   userIconDiv.appendChild(imageTag);
   sendByUserDiv.appendChild(userIconDiv);
@@ -143,7 +148,7 @@ socket.on("load_messages", (messages) => {
     userIconDiv.setAttribute("class", "user-icon");
 
     const imageTag = document.createElement("img");
-    imageTag.src = `../../public/images/${message.authorPic}.png`;
+    imageTag.src = `public/images/${message.authorPic}.png`;
 
     userIconDiv.appendChild(imageTag);
     sendByUserDiv.appendChild(userIconDiv);

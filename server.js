@@ -4,6 +4,7 @@ import http from "http";
 import { Server } from "socket.io";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import "dotenv/config";
 
 // Importing middlewares and requirements
 import { connectToDb } from "./src/config/mongoose.db.js";
