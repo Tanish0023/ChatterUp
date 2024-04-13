@@ -21,6 +21,11 @@ app.use(cors);
 // socket server
 const server = http.createServer(app);
 
+app.get("/", (req, res) => {
+  console.log("yes");
+  res.sendFile("/index.html");
+});
+
 const io = new Server(server, {
   cors: {
     origin: "*",
@@ -88,7 +93,9 @@ app.use((req, res) => {
 
 //
 
-server.listen(8000, async () => {
+const port = process.env.PORT;
+
+server.listen(port, async () => {
   await connectToDb();
-  console.log("Server is listening at 8000");
+  console.log("Server is listening at ", port);
 });
