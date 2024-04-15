@@ -21,9 +21,9 @@ app.use(cors);
 // socket server
 const server = http.createServer(app);
 
-app.get("/", (req, res) => {
-  console.log("yes");
-  res.sendFile("/index.html");
+app.get("/", function (req, res) {
+  console.log(path.join("/index.html"));
+  res.sendFile(path.join("/index.html"));
 });
 
 const io = new Server(server, {
