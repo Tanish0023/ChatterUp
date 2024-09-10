@@ -93,7 +93,7 @@ app.use((req, res) => {
 
 //
 
-const port = 8000;
+const port = process.env.PORT;
 
 server.listen(port, async () => {
   await connectToDb();
