@@ -2,7 +2,7 @@
   "name": "chatterup",
   "version": "1.0.0",
   "type": "module",
-  "description": "Its a chatting app where multiple can interact seamlessly",
+  "description": "It's a chatting app where multiple can interact seamlessly",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

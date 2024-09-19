@@ -183,6 +183,8 @@ socket.on("load_messages", (messages) => {
 });
 
 //
+
+//
 // Preventing auto refresh
 document.getElementById("myForm").addEventListener("submit", function (event) {
   event.preventDefault();
